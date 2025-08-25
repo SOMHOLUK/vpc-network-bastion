@@ -2,18 +2,22 @@
 
 ---
 <br>
+
 ![pic 1](images/1-create-vpc.png)
 <br>
 ---
 <br>
+
 ![pic 2](images/2-created-subnets.png)
 <br>
 ---
 <br>
+
 ![pic 3](images/3-create-demo-igw.png)
 <br>
 ---
 <br>
+
 ![pic 4](images/4-attach-igw-to-vpc.png)
 <br>
 ---
