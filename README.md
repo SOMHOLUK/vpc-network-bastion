@@ -1,6 +1,6 @@
-#### Step 1
+### Step 1
 
-#### Created a VPC
+### Created a VPC
 
 ---
 
@@ -12,9 +12,9 @@
 
 ---
 
-#### Step 2
+### Step 2
 
-#### Created 4 subnets, a)PublicSubnetA b)PublicSubnetB c)PrivateSubnetA d)PrivateSubnetB
+### Created 4 subnets, a)PublicSubnetA b)PublicSubnetB c)PrivateSubnetA d)PrivateSubnetB
 
 <br>
 
@@ -24,9 +24,9 @@
 
 ---
 
-#### Step 3
+### Step 3
 
-#### Created Internet Gateway
+### Created Internet Gateway
 
 <br>
 
@@ -36,9 +36,9 @@
 
 ---
 
-#### Step 4
+### Step 4
 
-#### Attached Internet Gateway to VPC
+### Attached Internet Gateway to VPC
 
 <br>
 
@@ -48,9 +48,9 @@
 
 ---
 
-#### Step 5
+### Step 5
 
-#### Created a PublicRouteTable and a PrivateRouteTable
+### Created a PublicRouteTable and a PrivateRouteTable
 
 <br>
 
@@ -60,9 +60,9 @@
 
 ---
 
-#### Step 6
+### Step 6
 
-#### Associated the public subnets with the PublicRouteTable to enable internet access for resources in that subnet
+### Associated the public subnets with the PublicRouteTable to enable internet access for resources in that subnet
 
 <br>
 
@@ -72,9 +72,9 @@
 
 ---
 
-#### Step 7
+### Step 7
 
-#### Associated the private subnets with the PrivateRouteTable.
+### Associated the private subnets with the PrivateRouteTable.
 
 <br>
 
@@ -84,9 +84,9 @@
 
 ---
 
-#### Step 8
+### Step 8
 
-#### Added routes. Created a route in the PublicRouteTable with a destination of 0.0.0.0/0 and selected the Internet Gateway as the target.
+### Added routes. Created a route in the PublicRouteTable with a destination of 0.0.0.0/0 and selected the Internet Gateway as the target.
 
 <br>
 
@@ -96,9 +96,9 @@
 
 ---
 
-#### Step 9
+### Step 9
 
-#### Created a security group for the bastion host and named it: `bastion-host-sg`
+### Created a security group for the bastion host and named it: `bastion-host-sg`
 
 <br>
 
@@ -108,9 +108,9 @@
 
 ---
 
-#### Step 10
+### Step 10
 
-#### Edited the subnet settings of both PublicSubnet A and PublicSubnetB by selecting, `enable auto-assign public Ipv4 address`.
+### Edited the subnet settings of both PublicSubnet A and PublicSubnetB by selecting, `enable auto-assign public Ipv4 address`.
 
 <br>
 
@@ -120,9 +120,9 @@
 
 ---
 
-#### Step 11
+### Step 11
 
-#### Created an EC2 instance named `bastion-host` in PublicSubnetB
+### Created an EC2 instance named `bastion-host` in PublicSubnetB
 
 <br>
 
@@ -132,9 +132,9 @@
 
 ---
 
-#### Step 12
+### Step 12
 
-#### Successfully connected to the bastion-host and pinged ietf.org as recommended by AWS.
+### Successfully connected to the bastion-host and pinged ietf.org as recommended by AWS.
 
 <br>
 
@@ -144,9 +144,9 @@
 
 ---
 
-#### Step 13
+### Step 13
 
-#### Created a security group called `private-server-sg` for the 2 private instances in the private subnets, `private-server-a` in PrivateSubnetA and `private-server-b` in PrivateSubnetB.
+### Created a security group called `private-server-sg` for the 2 private instances in the private subnets, `private-server-a` in PrivateSubnetA and `private-server-b` in PrivateSubnetB.
 
 <br>
 
@@ -156,9 +156,9 @@
 
 ---
 
-#### Step 14
+### Step 14
 
-#### Created the EC2 instance `private-server-a` in the PrivateSubnetA.
+### Created the EC2 instance `private-server-a` in the PrivateSubnetA.
 
 <br>
 
@@ -168,9 +168,9 @@
 
 ---
 
-#### Step 15
+### Step 15
 
-#### Created a public NAT gateway in `PublicSubnetA` and clicked on `Allocate Elastic IP` to have an Elastic IP automatically allocated for the Public NAT gateway.
+### Created a public NAT gateway in `PublicSubnetA` and clicked on `Allocate Elastic IP` to have an Elastic IP automatically allocated for the Public NAT gateway.
 
 <br>
 
@@ -180,21 +180,21 @@
 
 ---
 
-#### Step 16
+### Step 16
 
-#### Updated the private route table by adding a route of which the `destination` is `0.0.0.0/0` and the `target` is the NAT gateway that you created in step 15. This was done so that traffic goes through NAT Gateway.
+### Updated the private route table by adding a route of which the `destination` is `0.0.0.0/0` and the `target` is the NAT gateway that you created in step 15. This was done so that traffic goes through NAT Gateway.
 
 <br>
 
-![pic 16](images/15-update-private-route-table.png)
+![pic 16](images/16-update-private-route-table.png)
 
 <br>
 
 ---
 
-#### Step 17
+### Step 17
 
-#### Accessed the private-server-a EC2 instance in Availability zone A, by going through the bastion-host using SSH and used the command `ping ietf.org` in the private-server-a EC2 instance, to show that the private-server-a EC2 has outbound internet connectivity.
+### Accessed the private-server-a EC2 instance in Availability zone A, by going through the bastion-host using SSH and used the command `ping ietf.org` in the private-server-a EC2 instance, to show that the private-server-a EC2 has outbound internet connectivity.
 
 <br>
 
@@ -204,9 +204,9 @@
 
 ---
 
-#### Step 18
+### Step 18
 
-#### Accessed the private-server-b EC2 instance in Availability zone B, by going through the bastion-host using SSH and used the command `ping ietf.org` in the private-server-b EC2 instance, to show that the private-server-b EC2 has outbound internet connectivity.
+### Accessed the private-server-b EC2 instance in Availability zone B, by going through the bastion-host using SSH and used the command `ping ietf.org` in the private-server-b EC2 instance, to show that the private-server-b EC2 has outbound internet connectivity.
 
 <br>
 
