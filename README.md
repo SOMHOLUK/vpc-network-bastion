@@ -1,25 +1,44 @@
+#### Step 1
 
+#### Created a VPC
 
----
 <br>
 
 ![pic 1](images/1-create-vpc.png)
+
 <br>
+
 ---
+
+#### Step 2
+
+#### Created 4 subnets, a)PublicSubnetA b)PublicSubnetB c)PrivateSubnetA d)PrivateSubnetB
+
 <br>
 
 ![pic 2](images/2-created-subnets.png)
+
 <br>
+
 ---
+
+#### Step 3
+
+#### Created Internet Gateway
+
 <br>
 
 ![pic 3](images/3-create-demo-igw.png)
+
 <br>
+
 ---
+
 <br>
 
 ![pic 4](images/4-attach-igw-to-vpc.png)
 <br>
+
 ---
 
 ![pic 5](images/5-create-private-and-public-route-table.png)
