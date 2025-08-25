@@ -162,7 +162,55 @@
 
 <br>
 
-![pic 14](images/14-created-private-server-ec2.png)
+![pic 14](images/14-Created-private-servers.png)
+
+<br>
+
+---
+
+#### Step 15
+
+#### Created a public NAT gateway in `PublicSubnetA` and clicked on `Allocate Elastic IP` to have an Elastic IP automatically allocated for the Public NAT gateway.
+
+<br>
+
+![pic 15](images/15-ngw-created.png)
+
+<br>
+
+---
+
+#### Step 16
+
+#### Updated the private route table by adding a route of which the `destination` is `0.0.0.0/0` and the `target` is the NAT gateway that you created in step 15. This was done so that traffic goes through NAT Gateway.
+
+<br>
+
+![pic 16](images/15-update-private-route-table.png)
+
+<br>
+
+---
+
+#### Step 17
+
+#### Accessed the private-server-a EC2 instance in Availability zone A, by going through the bastion-host using SSH and used the command `ping ietf.org` in the private-server-a EC2 instance, to show that the private-server-a EC2 has outbound internet connectivity.
+
+<br>
+
+![pic 17](images/17-accessed-private-server-a-through-bastion-host.png)
+
+<br>
+
+---
+
+#### Step 18
+
+#### Accessed the private-server-b EC2 instance in Availability zone B, by going through the bastion-host using SSH and used the command `ping ietf.org` in the private-server-b EC2 instance, to show that the private-server-b EC2 has outbound internet connectivity.
+
+<br>
+
+![pic 18](images/18-accessed-private-server-b-through-bastion-host.png)
 
 <br>
 
