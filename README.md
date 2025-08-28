@@ -239,7 +239,12 @@ The CloudWatch Agent was installed on the bastion host to collect system metrics
 ### Installed the CloudWatch Agent on the bastion-host EC2 instance and configured a config.json file. Memory and disk utilisation metrics were collected from the instance and sent to Amazon CloudWatch as you can see below.
 
 <br>
+<br>
+
 ![pic 20](images/20-memory-used-percentage.png)
+
+<br>
+
 ![pic 21](images/21-disk-used-percent.png)
 
 ---
@@ -249,8 +254,12 @@ The CloudWatch Agent was installed on the bastion host to collect system metrics
 ### SSH/audit logs were also collected and streamed to the `login-monitoring` log group in CloudWatch Logs.
 
 <br>
+<br>
 
 ![pic 22](images/22-CloudWatch-login.png)
+
+<br>
+
 ![pic 23](images/23-CloudWatch-logs.png)
 
 ---
